@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Matrix Display</title>
+</head>
+<body>
+
+<h2>Given System (Augmented Matrix)</h2>
+
+<table border="1" cellpadding="10">
+  <% matrix.forEach(row => { %>
+    <tr>
+      <% row.forEach((value, index) => { %>
+        <% if (index === row.length - 1) { %>
+          <td>| <%= value %></td>
+        <% } else { %>
+          <td><%= value %></td>
+        <% } %>
+      <% }) %>
+    </tr>
+  <% }) %>
+</table>
+
+<br>
+<a href="/">Go Back</a>
+
+</body>
+</html>
