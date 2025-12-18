@@ -7,19 +7,36 @@
 
 <h2>Given System (Augmented Matrix)</h2>
 
-<table border="1" cellpadding="10">
+<table cellpadding="20">
   <% matrix.forEach(row => { %>
     <tr>
-      <% row.forEach((value, index) => { %>
+      <% row.forEach((value, index, arr) => { %>
         <% if (index === row.length - 1) { %>
-          <td>| <%= value %></td>
+          <td><%= value %></td>
         <% } else { %>
           <td><%= value %></td>
         <% } %>
       <% }) %>
-    </tr>
+    </tr> 
   <% }) %>
 </table>
+
+<table cellpadding="20">
+  <% steps.forEach(row => { %>
+    <tr>
+      <% row.forEach((value, index, arr) => { %>
+        <% if (index === row.length - 1) { %>
+          <td><%= value %></td>
+          <td><%= arr %></td>
+        <% } else { %>
+          <td><%= value %></td>
+        <% } %>
+      <% }) %>
+    </tr> 
+  <% }) %>
+</table>
+
+
 
 <br>
 <a href="/">Go Back</a>

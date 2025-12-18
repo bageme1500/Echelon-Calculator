@@ -1,4 +1,5 @@
 import express from "express";
+import {solveGaussian} from "./service/elimination.js";
 
 const app = express();
 const PORT = 3000;
@@ -13,7 +14,9 @@ app.get("/", (req, res) => {
 
 app.post("/display", (req, res) => {
   const matrix = req.body.matrix;
-  res.render("display", { matrix });
+  const steps = solveGaussian(matrix);
+  
+  res.render("display", { matrix, steps });
 });
 
 app.listen(PORT, () => {
