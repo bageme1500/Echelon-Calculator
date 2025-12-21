@@ -3,7 +3,7 @@ export function solveGaussian(matrix){
 
     steps.forEach(row => {
         row.forEach((value,index)=>{
-            console.log(value)
+            console.log(typeof(value))
         })
         
     });
