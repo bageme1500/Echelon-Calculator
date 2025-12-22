@@ -14,9 +14,9 @@ app.get("/", (req, res) => {
 
 app.post("/display", (req, res) => {
   const matrix = req.body.matrix;
-  const steps = solveGaussian(matrix);
+  const leadingOneMatrix = solveGaussian(matrix);
   
-  res.render("display", { matrix, steps });
+  res.render("display", { matrix, leadingOneMatrix });
 });
 
 app.listen(PORT, () => {

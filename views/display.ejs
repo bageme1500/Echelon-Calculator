@@ -22,12 +22,12 @@
 </table>
 
 <table cellpadding="20">
-  <% steps.forEach(row => { %>
+  <% leadingOneMatrix.forEach(row => { %>
     <tr>
       <% row.forEach((value, index, arr) => { %>
         <% if (index === row.length - 1) { %>
           <td><%= value %></td>
-          <td><%= arr %></td>
+          
         <% } else { %>
           <td><%= value %></td>
         <% } %>
