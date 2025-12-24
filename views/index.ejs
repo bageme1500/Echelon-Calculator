@@ -13,13 +13,14 @@
     <% for(let j = 0; j < 4; j++) { %>
       <input 
         type="number" 
-        name="matrix[<%= i %>][<%= j %>]" 
+        name="matrix[<%= i %>][<%= j %>]"
+        pattern="-?\d*\.?\d+" 
         step="any" 
         required>
     <% } %>
     <br><br>
   <% } %>
-
+  
   <button type="submit">Display Equation</button>
 </form>
 
