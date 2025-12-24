@@ -16,7 +16,7 @@ app.post("/display", (req, res) => {
   const matrix = req.body.matrix;
   const steps = solveGaussian(matrix);
   
-  res.render("display", { matrix, steps, solutions });
+  res.render("display", { matrix, steps});
 });
 
 app.listen(PORT, () => {

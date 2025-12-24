@@ -130,10 +130,7 @@ export function solveGaussian(matrix) {
     );
     
     console.log("Solutions:", roundedSolutions);
+    console.log(steps);
     
-    return {
-        steps: steps,
-        solutions: roundedSolutions,
-        type: "unique"
-    };
+    return steps;
 }
